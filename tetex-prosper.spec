@@ -6,7 +6,7 @@ Version:	1.00.4
 Release:	1
 License:	GPL
 Group:		Applications/Publishing/TeX
-Source0:	http://telia.dl.sourceforge.net/sourceforge/prosper/%{short_name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/sourceforge/prosper/%{short_name}-%{version}.tar.bz2
 # Source0-md5:	279a7e291cb78064e90d9f78cbbe9632
 URL:		http://prosper.sourceforge.net/
 Requires:	tetex-latex
