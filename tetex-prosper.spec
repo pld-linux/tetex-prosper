@@ -3,15 +3,17 @@ Summary:	LaTeX class for writing transparencies
 Summary(pl):	Klasa LaTeXa do tworzenia slajdów
 Name:		tetex-prosper
 Version:	1.00.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Publishing/TeX
-Source0:	http://dl.sourceforge.net/sourceforge/prosper/%{short_name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/prosper/%{short_name}-%{version}.tar.bz2
 # Source0-md5:	279a7e291cb78064e90d9f78cbbe9632
 URL:		http://prosper.sourceforge.net/
 Requires:	tetex-latex
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		texhash	[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 
 %description
 Prosper is a LaTeX class for writing transparencies. It is written on
@@ -30,7 +32,6 @@ komputerze z projektorem video mog± zawieraæ efekty animacji,
 wy¶wietlania przyrostowego i podobne.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
 %setup -q -n %{short_name}
 find . -type d -name CVS | xargs rm -rf
 find . -type f -empty | xargs rm -rf
@@ -48,8 +49,11 @@ rm -f contrib/*.sty
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p %{_bindir}/mktexlsr
-%postun	-p %{_bindir}/mktexlsr
+%post
+%{texhash}
+
+%postun
+%{texhash}
 
 %files
 %defattr(644,root,root,755)
