@@ -38,7 +38,7 @@ find . -type f -empty | xargs rm -rf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d -m 755 $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
+install -d $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 
 install %{short_name}.cls $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 install *.sty $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
