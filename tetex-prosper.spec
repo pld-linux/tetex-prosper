@@ -1,13 +1,13 @@
 %define short_name prosper
+Summary:	LaTeX class for writing transparencies
+Summary(pl):	Klasa LaTeXa do tworzenia slajdów
 Name:		tetex-prosper
 Version:	1.00.4
 Release:	1
-Summary:	LaTeX class for writing transparencies
 License:	GPL
-Group:		Publishing
-######		Unknown group!
-URL:		http://prosper.sourceforge.net
+Group:		Applications/Publishing/TeX
 Source0:	http://telia.dl.sourceforge.net/sourceforge/prosper/%{short_name}-%{version}.tar.bz2
+URL:		http://prosper.sourceforge.net/
 Requires:	tetex-latex
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,17 +20,24 @@ overhead projector and a video projector. Slides prepared for a
 presentation with a computer and a video projector may integrate
 animation effects, incremental display, and such.
 
+%description -l pl
+Prosper to klasa LaTeXa do tworzenia slajdów. Jest napisana w oparciu
+o klasê seminar Timothego Van Zandta. Celem jest zaoferowanie
+¶rodowiska do ³atwego tworzenia slajdów do prezentacji zarówno na
+rzutniku, jak i projektorze video. Slajdy tworzone do prezentacji na
+komputerze z projektorem video mog± zawieraæ efekty animacji,
+wy¶wietlania przyrostowego i podobne.
+
 %prep
 rm -rf $RPM_BUILD_ROOT
 %setup -q -n %{short_name}
 find . -type d -name CVS | xargs rm -rf
 find . -type f -empty | xargs rm -rf
 
-%build
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d -m 755 $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
+
 install %{short_name}.cls $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 install *.sty $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 install contrib/*.sty $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
@@ -40,9 +47,8 @@ rm -f contrib/*.sty
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p %{_bindir}/mktexlsr
-
-%postun -p %{_bindir}/mktexlsr
+%post	-p %{_bindir}/mktexlsr
+%postun	-p %{_bindir}/mktexlsr
 
 %files
 %defattr(644,root,root,755)
