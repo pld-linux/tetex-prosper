@@ -1,6 +1,6 @@
 %define short_name prosper
 Summary:	LaTeX class for writing transparencies
-Summary(pl.UTF-8):   Klasa LaTeXa do tworzenia slajdów
+Summary(pl.UTF-8):	Klasa LaTeXa do tworzenia slajdów
 Name:		tetex-prosper
 Version:	1.00.4
 Release:	2
