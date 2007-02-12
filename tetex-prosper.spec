@@ -1,6 +1,6 @@
 %define short_name prosper
 Summary:	LaTeX class for writing transparencies
-Summary(pl):	Klasa LaTeXa do tworzenia slajdów
+Summary(pl.UTF-8):   Klasa LaTeXa do tworzenia slajdÃ³w
 Name:		tetex-prosper
 Version:	1.00.4
 Release:	2
@@ -23,13 +23,13 @@ overhead projector and a video projector. Slides prepared for a
 presentation with a computer and a video projector may integrate
 animation effects, incremental display, and such.
 
-%description -l pl
-Prosper to klasa LaTeXa do tworzenia slajdów. Jest napisana w oparciu
-o klasê seminar Timothego Van Zandta. Celem jest zaoferowanie
-¶rodowiska do ³atwego tworzenia slajdów do prezentacji zarówno na
+%description -l pl.UTF-8
+Prosper to klasa LaTeXa do tworzenia slajdÃ³w. Jest napisana w oparciu
+o klasÄ™ seminar Timothego Van Zandta. Celem jest zaoferowanie
+Å›rodowiska do Å‚atwego tworzenia slajdÃ³w do prezentacji zarÃ³wno na
 rzutniku, jak i projektorze video. Slajdy tworzone do prezentacji na
-komputerze z projektorem video mog± zawieraæ efekty animacji,
-wy¶wietlania przyrostowego i podobne.
+komputerze z projektorem video mogÄ… zawieraÄ‡ efekty animacji,
+wyÅ›wietlania przyrostowego i podobne.
 
 %prep
 %setup -q -n %{short_name}
