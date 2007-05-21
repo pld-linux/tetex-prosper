@@ -6,8 +6,8 @@ Version:	1.00.4
 Release:	2
 License:	GPL
 Group:		Applications/Publishing/TeX
-Source0:	http://dl.sourceforge.net/prosper/%{short_name}-%{version}.tar.bz2
-# Source0-md5:	279a7e291cb78064e90d9f78cbbe9632
+Source0:    http://dl.sourceforge.net/prosper/%{short_name}-%{version}.tar.gz
+# Source0-md5:	4acbd7a7aea2000b4a5c7048f06041cc
 URL:		http://prosper.sourceforge.net/
 Requires:	tetex-latex
 BuildArch:	noarch
